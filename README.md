@@ -1,6 +1,10 @@
 ## Terraform Repo Layout
-Using this repo layout, you can have multiple products(apps) and multiple environments of that product and your products can share modules.
+Using this repo layout, you can have multiple products(apps) and multiple environments for those products and your products can share modules.
 This repo uses the ['terra_wrap' command](https://github.com/hal58th/terra_wrap) and is a fully working example that uses AWS.
+
+### The special `bootstrap` product.
+The bootstrap product is a special directory that creates all the resources needed for the products to be initialized.
+In this example, we create the S3 buckets where we store the tfstate file needed for the products.
 
 ### Running Terraform
 A custom docker container is created to help control the Terraform version and lets you add any software you wish.
